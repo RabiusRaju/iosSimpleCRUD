@@ -17,6 +17,7 @@
 		0039321C29A3D22800FB751C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039321B29A3D22800FB751C /* Models.swift */; };
 		0039321E29A3D3A300FB751C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039321D29A3D3A300FB751C /* ViewModel.swift */; };
 		0039322029A3E54400FB751C /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039321F29A3E54400FB751C /* NewPostView.swift */; };
+		00C228AB29A52960009CBD5D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C228AA29A52960009CBD5D /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		0039321B29A3D22800FB751C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		0039321D29A3D3A300FB751C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0039321F29A3E54400FB751C /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		00C228AA29A52960009CBD5D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		00C228AC29A52EAE009CBD5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 		003931E529A3D16900FB751C = {
 			isa = PBXGroup;
 			children = (
+				00C228AA29A52960009CBD5D /* DetailView.swift */,
 				003931F029A3D16900FB751C /* SimpleCrud */,
 				0039320129A3D16D00FB751C /* SimpleCrudTests */,
 				0039320B29A3D16D00FB751C /* SimpleCrudUITests */,
@@ -100,6 +104,7 @@
 		003931F029A3D16900FB751C /* SimpleCrud */ = {
 			isa = PBXGroup;
 			children = (
+				00C228AC29A52EAE009CBD5D /* Info.plist */,
 				003931F129A3D16900FB751C /* SimpleCrudApp.swift */,
 				003931F329A3D16900FB751C /* ContentView.swift */,
 				0039321F29A3E54400FB751C /* NewPostView.swift */,
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0039321C29A3D22800FB751C /* Models.swift in Sources */,
+				00C228AB29A52960009CBD5D /* DetailView.swift in Sources */,
 				003931F429A3D16900FB751C /* ContentView.swift in Sources */,
 				0039321E29A3D3A300FB751C /* ViewModel.swift in Sources */,
 				003931F229A3D16900FB751C /* SimpleCrudApp.swift in Sources */,
@@ -432,6 +438,7 @@
 				DEVELOPMENT_TEAM = R4V6A2N7B7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleCrud/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,6 +468,7 @@
 				DEVELOPMENT_TEAM = R4V6A2N7B7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleCrud/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

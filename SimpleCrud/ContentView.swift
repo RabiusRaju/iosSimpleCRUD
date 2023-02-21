@@ -15,6 +15,7 @@ struct ContentView: View {
 
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel : ViewModel
     @State var isPresentedNewPost = false
     @State var title = ""
     @State var post = ""
@@ -22,13 +23,13 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List{
-                ForEach(0 ..< 5, id: \.self ){ item in
+                ForEach(viewModel.items, id: \.id ){ item in
                     NavigationLink(
-                        destination: Text("Destination"),
+                        destination: DetailView(item: item),
                         label:{
                             VStack(alignment: .leading){
-                                Text("Navigation")
-                                Text("Hello, World !").font(.caption).foregroundColor(.gray)
+                                Text(item.title)
+                                Text(item.post).font(.caption).foregroundColor(.gray)
                             }
                         }
                     )

@@ -55,7 +55,6 @@ class ViewModel : ObservableObject {
             return
         }
         
-        
         let data = try! JSONSerialization.data(withJSONObject: parameters)
         
         var request = URLRequest(url: url)
@@ -63,12 +62,18 @@ class ViewModel : ObservableObject {
         request.httpBody = data
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        URLSession.shared.dataTask(with: url) { (data, res, error) in
+        
+        
+        URLSession.shared.dataTask(with: request) { (data, res, error) in
+            
+            
             
             if error != nil {
                 print("error",error?.localizedDescription ?? "")
                 return
             }
+            
+            
             
             do {
                 if let data = data {
@@ -81,7 +86,7 @@ class ViewModel : ObservableObject {
                 }
                 
             } catch let JsonError {
-                print("fetch Json Error :: ", JsonError.localizedDescription)
+                print("fetch Json Error createPost :: ", JsonError.localizedDescription)
             }
             
         }.resume()
@@ -121,7 +126,7 @@ class ViewModel : ObservableObject {
                 }
                 
             } catch let JsonError {
-                print("fetch Json Error :: ", JsonError.localizedDescription)
+                print("fetch Json Error updatePost ::  ", JsonError.localizedDescription)
             }
             
         }.resume()
@@ -161,7 +166,7 @@ class ViewModel : ObservableObject {
                 }
                 
             } catch let JsonError {
-                print("fetch Json Error :: ", JsonError.localizedDescription)
+                print("fetch Json Error  deletePost :: ", JsonError.localizedDescription)
             }
             
         }.resume()
