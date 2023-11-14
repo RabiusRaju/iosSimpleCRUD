@@ -9,10 +9,53 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HomeView()
+        AlertView()
     }
 }
 
+struct AlertView: View{
+    var body: some View{
+        NavigationView{
+            VStack{
+                Button(action: {
+                    
+                }, label: {
+                    Text("Tab Me!")
+                        .foregroundColor(Color.white)
+                        .bold()
+                        .font(.system(size: 24))
+                })
+                .frame(width: 200,
+                       height: 50,
+                       alignment: .center)
+                .padding()
+                .background(Color.green)
+                .cornerRadius(8)
+            }
+        }
+    }
+}
+
+struct GaugeView: View{
+    var body: some View{
+        Gauge(value: 33.0, in: 0.0...100.0){
+            Text("Speed")
+                .foregroundColor(Color.blue)
+        } currentValueLabel: {
+            Text("33")
+                .foregroundColor(Color.blue)
+        } minimumValueLabel: {
+            Text("0")
+                .foregroundColor(Color.blue)
+        } maximumValueLabel: {
+            Text("100")
+                .foregroundColor(Color.blue)
+        }
+        .frame(width: 100, height: 100, alignment: .top)
+        .gaugeStyle(.accessoryCircular)
+        
+    }
+}
 
 struct HomeView: View {
     @EnvironmentObject var viewModel : ViewModel
